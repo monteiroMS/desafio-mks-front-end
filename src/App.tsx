@@ -2,7 +2,9 @@ import React from 'react';
 
 function App() {
   return (
-    <p>Sistemas</p>
+    <div>
+      <p>configurando REDUX</p>
+    </div>
   );
 }
 
