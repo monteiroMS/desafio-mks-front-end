@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <p>here we go</p>
+    <p>Sistemas</p>
   );
 }
 
