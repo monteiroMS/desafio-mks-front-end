@@ -1,7 +1,11 @@
 import * as Styled from './styles';
 import cartImg from '../../images/shoppingCart.svg';
+import { useSelector } from 'react-redux';
+import { selectQuantity } from '../../redux/selectors/cart';
 
 const Header = () => {
+  const productsInCart: number = useSelector(selectQuantity);
+
   return (
     <Styled.Container>
       <Styled.Title>
@@ -13,7 +17,7 @@ const Header = () => {
           alt="carrinho de compras"
           src={ cartImg }
         />
-        <p>0</p>
+        <p>{ productsInCart }</p>
       </Styled.CartBox>
     </Styled.Container>
   )
