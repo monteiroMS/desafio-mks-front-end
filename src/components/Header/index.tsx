@@ -21,12 +21,13 @@ const Header = () => {
       <Styled.CartBtn
         type="button"
         onClick={ () => dispatch(showCart()) }
+        data-testid="cart-button"
       >
         <img
           alt="carrinho de compras"
           src={ cartImg }
         />
-        <p>{ productsInCart }</p>
+        <p data-testid="cart-counter">{ productsInCart }</p>
       </Styled.CartBtn>
     </Styled.Container>
   )

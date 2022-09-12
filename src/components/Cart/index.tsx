@@ -19,7 +19,9 @@ const Cart = () => {
     .toFixed(2);
   
   return (
-    <Styled.Container>
+    <Styled.Container
+      data-testid="carrinho-de-compras"
+    >
       <Styled.TitleAndCloseBtn>
         <p>Carrinho de compras</p>
         <Styled.CloseCartBtn
