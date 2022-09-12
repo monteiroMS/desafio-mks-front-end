@@ -10,6 +10,7 @@ export type InCartProduct = {
 
 export type CartReducer = {
   items: InCartProduct[],
+  showCart: boolean,
 };
 
 export type ChangeCartAction = {
@@ -18,3 +19,5 @@ export type ChangeCartAction = {
 };
 
 export type CartAction = (product: InCartProduct) => ChangeCartAction;
+
+export type NoPayloadAction = () => { type: string };

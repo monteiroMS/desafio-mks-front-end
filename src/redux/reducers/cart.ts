@@ -1,9 +1,10 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_DOWN, UPDATE_UP } from "../actions/cart";
+import { ADD_TO_CART, CLEAN_CART, REMOVE_FROM_CART, SHOW_CART, UPDATE_DOWN, UPDATE_UP } from "../actions/cart";
 import { CartReducer, InCartProduct } from "../../types/Cart";
 import { AnyAction } from "redux";
 
 const INITIAL_STATE: CartReducer = {
   items: [],
+  showCart: false,
 };
 
 const cart = (state = INITIAL_STATE, action: AnyAction): CartReducer => {
@@ -47,6 +48,17 @@ const cart = (state = INITIAL_STATE, action: AnyAction): CartReducer => {
       return {
         ...state,
         items: state.items.map(lowerQuantity),
+      }
+    case SHOW_CART:
+      return {
+        ...state,
+        showCart: !state.showCart,
+      }
+    case CLEAN_CART:
+      return {
+        ...state,
+        showCart: false,
+        items: [],
       }
     default:
       return state;
