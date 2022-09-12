@@ -2,8 +2,14 @@ import * as Styled from './styles';
 import cartImg from '../../images/shoppingCart.svg';
 import { useSelector } from 'react-redux';
 import { selectQuantity } from '../../redux/selectors/cart';
+import { ThunkDispatch } from 'redux-thunk';
+import { Store } from '../../types/Store';
+import { AnyAction } from 'redux';
+import { showCart } from '../../redux/actions/cart';
+import { useDispatch } from 'react-redux';
 
 const Header = () => {
+  const dispatch: ThunkDispatch<Store, unknown, AnyAction> = useDispatch();
   const productsInCart: number = useSelector(selectQuantity);
 
   return (
@@ -12,13 +18,16 @@ const Header = () => {
         <p className="stronger">MKS</p>
         <p>Sistemas</p>
       </Styled.Title>
-      <Styled.CartBox>
+      <Styled.CartBtn
+        type="button"
+        onClick={ () => dispatch(showCart()) }
+      >
         <img
           alt="carrinho de compras"
           src={ cartImg }
         />
         <p>{ productsInCart }</p>
-      </Styled.CartBox>
+      </Styled.CartBtn>
     </Styled.Container>
   )
 };

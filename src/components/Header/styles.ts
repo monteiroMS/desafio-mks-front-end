@@ -27,7 +27,8 @@ export const Title = styled.div`
   }
 `;
 
-export const CartBox = styled.div`
+export const CartBtn = styled.button`
+  border: none;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -45,5 +46,9 @@ export const CartBox = styled.div`
   img {
     height: 18px;
     margin-right: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 `;
