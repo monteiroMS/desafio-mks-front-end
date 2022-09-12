@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #EEEEEE;
-  align-items: center;
   display: flex;
-  font-size: 12px;
-  height: 35px;
+  align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  gap: 23px;
+  padding: 100px;
 `;

@@ -3,7 +3,7 @@ import * as Styled from './styles';
 const Footer = () => {
   return (
     <Styled.Container>
-      <p>FOOTER</p>
+      <p>MKS sistemas © Todos os direitos reservados</p>
     </Styled.Container>
   )
 };

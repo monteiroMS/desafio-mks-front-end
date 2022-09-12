@@ -3,6 +3,7 @@ export type Product = {
   name: string,
   brand: string,
   description: string,
+  photo: string,
   price: string,
 };
 
@@ -14,4 +15,9 @@ export type ProductsReducer = {
 export type ProductReducerAction = {
   type: string,
   payload: Product[],
+};
+
+export type PropProduct = {
+  key: string,
+  product: Product,
 };

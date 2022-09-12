@@ -1,8 +1,7 @@
 import { Dispatch } from "redux";
-import * as Endpoint from '../../helpers/endpoints';
+import * as Endpoint from '../../helpers';
 import { ProductReducerAction } from "../../types/Product";
 import { Product } from "../../types/Product";
-import { Store } from "../../types/Store";
 
 export const SET_LOADING = 'SET_LOADING';
 export const SET_FAILED = 'SET_FAILED';
@@ -35,5 +34,3 @@ export const getProducts = () => {
     }
   };
 }
-
-export const selectProducts = ({ products: { items } }: Store) => items;

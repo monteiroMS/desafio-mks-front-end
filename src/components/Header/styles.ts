@@ -12,9 +12,10 @@ export const Title = styled.div`
   color: white;
   display: flex;
   align-items: center;
+  font-size: 20px;
 
   .stronger {
-    font-size: xx-large;
+    font-size: 40px;
     font-weight: 700;
     margin: 0;
     margin-right: 5px;
@@ -22,7 +23,7 @@ export const Title = styled.div`
 
   p {
     margin: 0;
-    margin-top: 7px;
+    margin-top: 10px;
   }
 `;
 
@@ -32,16 +33,17 @@ export const CartBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 80px;
+  height: 45px;
+  width: 90px;
 
   p {
     margin: 0;
     font-weight: 700;
+    font-size: 18px;
   }
 
   img {
     height: 18px;
-    margin-right: 5px;
+    margin-right: 15px;
   }
 `;
