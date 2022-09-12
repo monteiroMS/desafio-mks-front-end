@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const opacity = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   border-radius: 8px;
@@ -10,6 +19,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding-top: 10px;
   width: 218px;
+  animation: ${opacity} 0.5s ease-in;
 `;
 
 export const Photo = styled.img`
