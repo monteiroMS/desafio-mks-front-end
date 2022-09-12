@@ -1,7 +1,8 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
-import { renderWithRedux } from "./renderWithRedux";
+import { renderWithRedux } from "./helpers/renderWithRedux";
+import { products } from './helpers/mocks';
 
 describe('Testa se o componente "Header"', () => {
   it('Renderiza um título e subtítulo', () => {
@@ -33,6 +34,10 @@ describe('Testa se o componente "Header"', () => {
   });
 
   it('Ao clicar no botão de compra, a quantidade de itens no carrinho sobe', async () => {
+    global.fetch = jest.fn(() => Promise.resolve({
+      json: jest.fn(() => Promise.resolve({ products })),
+    })) as jest.Mock;
+
     renderWithRedux(<App />);
     const cartCounter = screen.getByTestId('cart-counter');
     const [buyButton1, buyButton2] = await screen.findAllByRole('button', { name: /comprar/i });

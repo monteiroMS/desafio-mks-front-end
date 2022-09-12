@@ -27,6 +27,7 @@ const Cart = () => {
         <Styled.CloseCartBtn
           type="button"
           onClick={ () => dispatch(showCart()) }
+          data-testid="close-cart-button"
         >
           X
         </Styled.CloseCartBtn>
@@ -43,7 +44,9 @@ const Cart = () => {
             ))
         }
       </Styled.ProductsContainer>
-      <Styled.PriceContainer>
+      <Styled.PriceContainer
+        data-testid="total-price-container"
+      >
         <p>Total:</p>
         <p>{ toReal(getTotal()) }</p>
       </Styled.PriceContainer>
