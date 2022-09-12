@@ -6,6 +6,10 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px 70px;
+
+  @media (max-width: 460px) {
+    padding: 15px 25px;
+  }
 `;
 
 export const Title = styled.div`
@@ -24,6 +28,15 @@ export const Title = styled.div`
   p {
     margin: 0;
     margin-top: 10px;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 12px;
+
+    .stronger {
+      font-size: 32px;
+      font-weight: 600;
+    }
   }
 `;
 
@@ -50,5 +63,19 @@ export const CartBtn = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 460px) {
+    height: 26px;
+    width: 52px;
+    img {
+        height: 10px;
+        margin-right: 15px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
   }
 `;

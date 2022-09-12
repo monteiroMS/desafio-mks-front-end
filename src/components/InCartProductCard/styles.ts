@@ -44,6 +44,36 @@ export const Container = styled.div`
   .delete-button:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 500px) {
+    height: 220px;
+    flex-direction: column;
+
+    img {
+      height: 95px;
+    }
+
+    .delete-button {
+      align-self: end;
+      height: 30px;
+      font-size: 25px;
+      width: 30px;
+    }
+
+    .price {
+      background-color: #373737;
+      border-radius: 5px;
+      color: white;
+      display: flex;
+      align-items: center;
+      height: 25px;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 5px 5px;
+      margin: 10px 0 15px 0;
+
+    }
+  }
 `;
 
 export const QuantityContainer = styled.div`
@@ -78,6 +108,25 @@ export const QuantityContainer = styled.div`
       font-size: 10px;
       padding: 0 5px;
       margin: 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .qtd {
+      display: none;
+    }
+
+    .pill {
+      height: 35px;
+      width: 90px;
+      align-items: center;
+      justify-content: space-evenly;
+
+      p {
+        height: 26px;
+        padding: 0 10px;
+        font-size: 16px;
+      }
     }
   }
 `;
