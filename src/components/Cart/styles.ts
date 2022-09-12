@@ -6,12 +6,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 62.74%;
+  right: 0;
   position: absolute;
   padding: 36px 47px;
-  min-height: 93%;
+  min-height: 92%;
   width: 30vw;
   z-index: 1;
+
+  @media (max-width: 1200px) {
+    padding: 36px 15px;
+    width:  50vw;
+  }
+
+  @media (max-width: 700px) {
+    padding: 36px 15px;
+    width:  75vw;
+  }
 `;
 
 export const CloseCartBtn = styled.button`
@@ -64,6 +74,10 @@ export const PriceContainer = styled.div`
   justify-content: space-between;
   font-size: 28px;
   font-weight: 700;
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
 `;
 
 export const FinishPurchaseBtn = styled.button`
@@ -79,5 +93,11 @@ export const FinishPurchaseBtn = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: -36px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 `;
