@@ -4,6 +4,7 @@ export type InCartProduct = {
   brand: string,
   description: string,
   price: string,
+  photo: string,
   quantity: number,
 };
 
