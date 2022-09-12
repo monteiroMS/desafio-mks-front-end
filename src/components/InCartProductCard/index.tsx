@@ -23,7 +23,9 @@ const InCartProductCard = ({ product }: { key: string, product: InCartProduct })
   }
 
   return (
-    <Styled.Container>
+    <Styled.Container
+      data-testid="in-cart-product-card"
+    >
       <img
         alt={ product.name }
         src={ product.photo }

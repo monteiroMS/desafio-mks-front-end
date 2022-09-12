@@ -2,7 +2,9 @@ import * as Styled from './styles';
 
 const Skeleton = () => {
   return (
-    <Styled.Container></Styled.Container>
+    <Styled.Container
+      data-testid="skeleton"
+    ></Styled.Container>
   );
 };
 

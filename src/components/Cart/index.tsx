@@ -19,12 +19,15 @@ const Cart = () => {
     .toFixed(2);
   
   return (
-    <Styled.Container>
+    <Styled.Container
+      data-testid="carrinho-de-compras"
+    >
       <Styled.TitleAndCloseBtn>
         <p>Carrinho de compras</p>
         <Styled.CloseCartBtn
           type="button"
           onClick={ () => dispatch(showCart()) }
+          data-testid="close-cart-button"
         >
           X
         </Styled.CloseCartBtn>
@@ -41,7 +44,9 @@ const Cart = () => {
             ))
         }
       </Styled.ProductsContainer>
-      <Styled.PriceContainer>
+      <Styled.PriceContainer
+        data-testid="total-price-container"
+      >
         <p>Total:</p>
         <p>{ toReal(getTotal()) }</p>
       </Styled.PriceContainer>

@@ -16,15 +16,21 @@ const ProductCard = ({ product }: PropProduct) => {
   };
   
   return (
-    <Styled.Container>
+    <Styled.Container
+      data-testid="product-card"
+    >
       <Styled.Photo
         alt={ `${product.name}` }
         src={ product.photo }
+        data-testid="product-card-photo"
       />
       <Styled.TitlePriceContainer>
         <p>{ product.name }</p>
         <div>
-          <p className="price">{ toReal(product.price) }</p>
+          <p
+            className="price"
+          data-testid="product-card-price"
+          >{ toReal(product.price) }</p>
         </div>
       </Styled.TitlePriceContainer>
       <Styled.Description>
